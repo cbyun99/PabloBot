@@ -17,6 +17,22 @@ bot = commands.Bot(command_prefix="!", intents=discord.Intents.all())
 async def on_ready():
     print(f'{bot.user} has connected to Discord!')
 
+# ##Nickname Changer##
+# @bot.command()
+# async def nickname(ctx, member: discord.Member, new_nickname: str):
+#     try:
+#         # Change the member's nickname
+#         await member.edit(nick=new_nickname)
+#         await ctx.send(f"Nickname for {member.display_name} has been changed to {new_nickname}.")
+#     except discord.Forbidden:
+#         await ctx.send("I don't have permission to change this user's nickname.")
+#     except discord.HTTPException:
+#         await ctx.send("Failed to change the nickname due to an unknown error.")
+
+# @bot.command()
+# async def hello(ctx):
+#     await ctx.send("Hello!")
+
 def generate_response():
     chat_completion = ai.chat.completions.create(
         messages=[
